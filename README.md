@@ -1,92 +1,138 @@
-# Project: Retail Sales & Customer Insights Database (SQL)
+# Retail Sales & Customer Analytics SQL Project
 
-## Project Goal
+A practical MySQL project designed to demonstrate SQL skills through a
+realistic retail sales database. The project covers data manipulation,
+querying, aggregation, joins, subqueries, correlated subqueries, CTEs,
+window functions, views, EXISTS / NOT EXISTS, and CASE expressions.
 
-Build a relational database for a retail company to manage:
-* Customers
-* Products
-* Orders
-* Payments
-* Delivery
-* Store locations
+## Project Overview
 
-Focus:
-* Database design
-* Constraints
-* DDL
-* DML
-* DCL
-* TCL
+This project simulates a retail business with customers, products,
+stores, orders, order items, and payments.
 
-⸻
+## Database Structure
 
-## Database Schema
-Tables included in this project:
+-   `customers` - customer information
+-   `products` - product information including category, price, stock,
+    and store
+-   `stores` - store information
+-   `orders` - customer orders, dates, and status
+-   `order_items` - products and quantities included in orders
+-   `payments` - payment details, methods, dates, and amounts
 
-### Customers
-Stores customer details and registration information.
+## SQL Topics Covered
 
-### Products
-Stores product information including pricing and stock.
+### DML
 
-### Orders
-Stores customer order records.
+-   UPDATE
+-   DELETE
+-   Updating customer information, prices, stock, orders, and payments
+-   Foreign-key constraint behavior
 
-### Order_Items
-Handles product-level order details.
+### SELECT & Filtering
 
-### Payments
-Stores payment transaction records.
+-   SELECT, WHERE, DISTINCT
+-   IN, BETWEEN, LIKE
+-   ORDER BY, LIMIT
 
-### Stores
-Stores retail store information.
+### Aggregate Functions
 
-## Constraint Challenges
+-   COUNT(), SUM(), AVG(), MAX(), MIN()
+-   GROUP BY and HAVING
 
-### Implement rules:
+### JOINs
 
-1. Customer email must be unique
-2. Product stock cannot go below zero
-3. Customer cannot place empty orders
-4. Duplicate products in same order not allowed
-5. Payment amount must match order value
+-   INNER JOIN
+-   LEFT JOIN
+-   RIGHT JOIN
+-   CROSS JOIN
+-   SELF JOIN
+-   FULL OUTER JOIN simulation in MySQL
+-   Finding unmatched records
 
-## DML Tasks
+### Subqueries
 
-### Perform:
+-   Scalar and multi-row subqueries
+-   Correlated subqueries
+-   IN / NOT IN
+-   EXISTS / NOT EXISTS
 
-#### INSERT
-* 30 customers
-* 20 products
-* 50 orders
+### CTEs
 
-#### UPDATE
-Examples:
-* Increase product prices
-* Update delivery status
-* Adjust stock
+-   Customer spending
+-   Monthly sales
+-   Product revenue
+-   Customer ranking
+-   Latest payments and first orders
+-   Multi-CTE analytical reports
 
-#### DELETE
-Examples:
-* Remove cancelled orders
-* Delete inactive customers
+### Window Functions
+
+-   ROW_NUMBER()
+-   RANK()
+-   DENSE_RANK()
+-   LAG()
+-   LEAD()
+-   PARTITION BY
+
+### Views
+
+Views are used for customer details, orders, inventory, payments,
+purchase summaries, delivered orders, products without orders, and
+monthly sales.
+
+### CASE Expressions
+
+Business classifications include customer age groups, product price
+groups, stock status, payment categories, customer spending tiers,
+revenue categories, and payment growth.
+
+## Business Questions Covered
+
+-   Which customer spent the most?
+-   Which product generated the highest revenue?
+-   Which city generated the highest sales?
+-   Which products were never ordered?
+-   Which customers never placed an order?
+-   Which customers spent more than the average customer?
+-   Which products are priced above their category average?
+-   What is the highest-priced product in each category?
+-   What is each customer's latest order?
+-   How does monthly revenue compare with the previous month?
+-   How can customers be classified based on spending?
 
 
-## DCL Tasks
-Practice:
-* Create analyst user
-* Grant read access
-* Revoke update permission
+## Skills Demonstrated
+
+-   SQL query writing
+-   Relational database analysis
+-   Data filtering and aggregation
+-   Multi-table joins
+-   Subquery and correlated subquery design
+-   CTEs
+-   Window functions
+-   Views
+-   Conditional logic with CASE
+-   Business-oriented data analysis
+
+## Tools
+
+-   MySQL
+-   MySQL Workbench
+-   Git / GitLab
 
 
-## TCL Tasks
-Perform:
-* START TRANSACTION
-* SAVEPOINT
-* ROLLBACK
-* COMMIT
+## Project Purpose
+
+This project was created as hands-on SQL practice with progressively
+increasing difficulty, moving from basic queries to advanced analytical
+SQL. It demonstrates the ability to translate business questions into
+SQL queries and work with relational data across multiple connected
+tables.
 
 
 ## Author
 
-Avinash Kumar
+**Avinash Kumar**
+
+Aspiring Data Analyst
